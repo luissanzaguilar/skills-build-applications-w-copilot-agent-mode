@@ -14,32 +14,39 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+
+import os
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from django.http import JsonResponse
 
-router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'teams', TeamViewSet)
-router.register(r'activities', ActivityViewSet)
-router.register(r'leaderboard', LeaderboardViewSet)
-router.register(r'workouts', WorkoutViewSet)
+
 
 @api_view(['GET'])
 def api_root(request):
-    return Response({
-        'users': '/users/',
-        'teams': '/teams/',
-        'activities': '/activities/',
-        'leaderboard': '/leaderboard/',
-        'workouts': '/workouts/',
+    codespace_name = os.environ.get('CODESPACE_NAME', 'localhost')
+    if codespace_name != 'localhost':
+        base_url = f"https://{codespace_name}-8000.app.github.dev"
+    else:
+        base_url = "http://localhost:8000"
+    return JsonResponse({
+        "activities": f"{base_url}/api/activities/",
+        "teams": f"{base_url}/api/teams/",
+        "leaderboard": f"{base_url}/api/leaderboard/",
+        "workouts": f"{base_url}/api/workouts/",
+        "users": f"{base_url}/api/users/"
     })
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', api_root, name='api_root'),
-    path('', include(router.urls)),
+    path('api/', api_root, name='api_root'),
+    path('api/activities/', include('octofit_tracker.activities.urls')),
+    path('api/teams/', include('octofit_tracker.teams.urls')),
+    path('api/leaderboard/', include('octofit_tracker.leaderboard.urls')),
+    path('api/workouts/', include('octofit_tracker.workouts.urls')),
+    path('api/users/', include('octofit_tracker.users.urls')),
 ]
