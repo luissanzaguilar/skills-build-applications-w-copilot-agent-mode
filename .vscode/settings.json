@@ -15,6 +15,9 @@
         },
         "git add": true,
         "git commit": true,
-        "git push": true
+        "git push": true,
+        "npx create-react-app": true,
+        "npm install": true,
+        "npm start": true
     }
 }
