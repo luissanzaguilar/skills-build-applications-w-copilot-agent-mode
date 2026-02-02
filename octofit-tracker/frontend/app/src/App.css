@@ -1,0 +1,110 @@
+/* Octofit Tracker App.css - Red & Blue Theme */
+
+body, .App {
+  background: linear-gradient(135deg, #e3e8ff 0%, #ffe3e3 100%);
+  color: #1a237e;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+header {
+  background: linear-gradient(90deg, #1a237e 60%, #e53935 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+}
+
+.octofit-logo {
+  height: 60px;
+  margin-right: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(26,35,126,0.15));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #e53935;
+  letter-spacing: 1px;
+}
+
+a, .nav-link, .navbar-brand {
+  color: #1a237e !important;
+  transition: color 0.2s;
+}
+a:hover, .nav-link:hover, .navbar-brand:hover {
+  color: #e53935 !important;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #1a237e 80%, #e53935 100%);
+  box-shadow: 0 2px 8px rgba(26,35,126,0.10);
+}
+.navbar-brand {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.nav-link.active {
+  color: #e53935 !important;
+  font-weight: bold;
+}
+
+button, .btn {
+  background: linear-gradient(90deg, #e53935 60%, #1a237e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(26,35,126,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #1a237e 60%, #e53935 100%);
+  color: #fff;
+}
+
+table {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(26,35,126,0.07);
+  overflow: hidden;
+}
+thead {
+  background: linear-gradient(90deg, #1a237e 60%, #e53935 100%);
+  color: #fff;
+}
+tbody tr:nth-child(even) {
+  background: #e3e8ff;
+}
+tbody tr:nth-child(odd) {
+  background: #ffe3e3;
+}
+td, th {
+  padding: 0.75rem 1.2rem;
+}
+
+main.container {
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(26,35,126,0.06);
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #e3e8ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a237e;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  main.container {
+    padding: 1rem 0.5rem;
+  }
+  .octofit-logo {
+    height: 40px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}

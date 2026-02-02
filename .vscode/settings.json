@@ -18,6 +18,14 @@
         "git push": true,
         "npx create-react-app": true,
         "npm install": true,
-        "npm start": true
+        "npm start": true,
+        "npm test": true,
+        "/^cd /workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/frontend/app && npm run build$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "npm ls": true,
+        "npm run build": true,
+        "npm restart": true
     }
 }
