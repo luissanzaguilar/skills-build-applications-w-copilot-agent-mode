@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 const Workouts = () => {
   const [workouts, setWorkouts] = useState([]);
-  const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`;
 
+  const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`;
+  
   useEffect(() => {
     console.log('Fetching Workouts from:', endpoint);
     fetch(endpoint)
@@ -13,7 +14,7 @@ const Workouts = () => {
         setWorkouts(results);
         console.log('Workouts data:', data);
       })
-      .catch(err => console.error('Error fetching workouts:', err));
+      .catch(err => console.error('Error  fetching  workouts:', err));
   }, [endpoint]);
 
   return (
