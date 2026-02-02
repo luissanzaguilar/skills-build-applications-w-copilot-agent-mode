@@ -27,6 +27,7 @@
         "npm ls": true,
         "npm run build": true,
         "npm restart": true,
-        "pkill": true
+        "pkill": true,
+        "git remote": true
     }
 }

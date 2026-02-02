@@ -1,6 +1,7 @@
 
 const Activities = () => {
   const [activities, setActivities] = useState([]);
+
   const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/activities/`;
 
   useEffect(() => {
@@ -10,7 +11,7 @@ const Activities = () => {
         const results = Array.isArray(data) ? data : data.results || [];
         setActivities(results);
       })
-      .catch(err => console.error('Error fetching activities:', err));
+      .catch(err => console.error('Error  fetching  activities:', err));
   }, [endpoint]);
 
   return (
