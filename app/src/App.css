@@ -1,0 +1,104 @@
+
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+
+.octofit-logo {
+  height: 60px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .octofit-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(12px + 2vmin);
+  color: #fff;
+  padding: 0 2rem;
+}
+
+
+.App-link, .navbar-brand, .nav-link {
+  color: #ff9800 !important;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.App-link:hover, .navbar-brand:hover, .nav-link:hover {
+  color: #fff176 !important;
+}
+
+nav.navbar {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(30,60,114,0.08);
+}
+
+ul.navbar-nav {
+  gap: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #1e3c72;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  margin: 1rem 0;
+}
+th, td {
+  border: 1px solid #b0bec5;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+th {
+  background: #2a5298;
+  color: #fff;
+}
+tr:nth-child(even) {
+  background: #f5f7fa;
+}
+
+button, .btn {
+  background: linear-gradient(90deg, #ff9800 0%, #ffb74d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(255,152,0,0.08);
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #ffb74d 0%, #ff9800 100%);
+  color: #232526;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

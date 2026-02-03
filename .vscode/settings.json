@@ -1,0 +1,33 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^source octofit-tracker/backend/venv/bin/activate && django-admin startproject octofit_tracker octofit-tracker/backend && python octofit-tracker/backend/octofit_tracker/manage\\.py migrate$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^export CODESPACE_NAME=\\$\\(echo \\$CODESPACE_NAME\\) && python3 octofit-tracker/backend/manage\\.py runserver 0\\.0\\.0\\.0:8000$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "pip": true,
+        "/^export CODESPACE_NAME=\\$\\(echo \\$CODESPACE_NAME\\) && source octofit-tracker/backend/venv/bin/activate && python3 octofit-tracker/backend/manage\\.py runserver 0\\.0\\.0\\.0:8000$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "git add": true,
+        "git commit": true,
+        "git push": true,
+        "npx create-react-app": true,
+        "npm install": true,
+        "npm start": true,
+        "npm test": true,
+        "/^cd /workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/frontend/app && npm run build$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "npm ls": true,
+        "npm run build": true,
+        "npm restart": true,
+        "pkill": true,
+        "git remote": true
+    }
+}
