@@ -108,3 +108,42 @@ main.container {
     font-size: 2rem;
   }
 }
+.nav-link {
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  background: none;
+}
+.nav-link.active {
+  color: #e53935 !important;
+  font-weight: bold;
+  background: #e3e8ff;
+  box-shadow: 0 2px 6px rgba(26,35,126,0.08);
+}
+
+/* Estilos para el menú de navegación */
+.App-nav {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  background: rgba(255,255,255,0.7);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(26,35,126,0.07);
+  margin: 1rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .App-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.4rem 0.7rem;
+  }
+}
